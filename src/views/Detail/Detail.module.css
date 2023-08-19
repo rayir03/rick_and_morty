@@ -1,0 +1,47 @@
+/* style.module.css */
+
+.characterContainer {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    text-align: center;
+}
+  
+  .characterImage {
+    max-width: 300px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    
+  }
+  
+  .characterName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 1%;
+  }
+  
+  .characterDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .characterDetails h2 {
+    margin: 5px;
+  }
+  
+  .loadingText {
+    font-size: 18px;
+    margin: 20px;
+  }
+  

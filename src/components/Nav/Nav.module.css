@@ -1,0 +1,39 @@
+/* style.module.css */
+
+/* style.module.css */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: hsl(93, 65%, 88%);
+    box-shadow: 0 2px 4px rgba(55, 55, 55, 0.1);
+  }
+  
+  .searchBar {
+    flex: 1; /* Para que ocupe todo el espacio disponible en la derecha */
+    display: flex;
+    justify-content: flex-end; /* Para alinear a la derecha */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .linkButton {
+    text-decoration: none;
+  }
+  
