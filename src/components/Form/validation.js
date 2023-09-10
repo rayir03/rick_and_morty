@@ -11,7 +11,7 @@ export default function validation(userData) {
         errors["email"] = "";
     }
     
-    const regexPassword = /^(?=.*\d).{6,10}$/;
+    const regexPassword = /^(?=.*\d)(?=.*[A-Z]).{6,10}$/;
     const validatePassword = regexPassword.test(userData.password);
     if(!validatePassword && userData.password) {
         errors['password'] = "Ingresa un password válido";

@@ -1,12 +1,12 @@
 import './App.css';
-import Cards from './components/Cards/Cards.jsx';
+
 import Nav from './components/Nav/Nav';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import About from './views/About/About';
 import Detail from './views/Detail/Detail';
-import Form from './components/Form/Form';
+
 import Login from './views/Login/Login';
 import Home from './views/Home/Home';
 
@@ -14,11 +14,12 @@ import Home from './views/Home/Home';
 
 function App() {
    const [characters, setCharacters] = useState([]);
+   const { pathname } = useLocation()
    const [access, setAccess] = useState(false);
    const EMAIL = "ejemplo@gmail.com";
-   const PASSWORD = "unaPassword1"
+   const PASSWORD = "12345678M"
    const navigate = useNavigate()
-   const location = useLocation();
+   
    const onClose = (id) => {
       const filtersId = characters.filter((char) => char.id !== id);
       setCharacters(filtersId);
@@ -57,7 +58,7 @@ function App() {
    return (
       <div className='App'>
          
-         {location !== "/" && <Nav onSearch={onSearch}/>}
+         { pathname !== "/" && <Nav onSearch={onSearch}/>}
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
          <Routes >
             <Route path="/" element={<Login login={login} />}></Route>
