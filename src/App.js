@@ -9,6 +9,9 @@ import Detail from './views/Detail/Detail';
 
 import Login from './views/Login/Login';
 import Home from './views/Home/Home';
+import Favorites from './views/Favorites/Favorites';
+import { removeFav } from './redux/actions';
+import { useDispatch } from 'react-redux';
 
 
 
@@ -19,10 +22,14 @@ function App() {
    const EMAIL = "ejemplo@gmail.com";
    const PASSWORD = "12345678M"
    const navigate = useNavigate()
+   const dispatch = useDispatch()
    
    const onClose = (id) => {
+      
       const filtersId = characters.filter((char) => char.id !== id);
       setCharacters(filtersId);
+      dispatch(removeFav(id))
+   
    };
 
    
@@ -65,6 +72,7 @@ function App() {
             <Route path="/home" element={<Home characters={characters} onClose={onClose}/>}></Route>
             <Route path="/about" element={<About/>}></Route>
             <Route path="/detail/:id" element={<Detail/>}></Route>
+            <Route path="/favorites" element={<Favorites/>}></Route>
             
          </Routes>
          
