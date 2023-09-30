@@ -12,10 +12,12 @@
   }
   
   .searchBar {
-    flex: 1; /* Para que ocupe todo el espacio disponible en la derecha */
+    flex: 1; 
     display: flex;
-    justify-content: flex-end; /* Para alinear a la derecha */
+    justify-content: flex-end; 
+    
   }
+  
   
   .button {
     padding: 10px 20px;
